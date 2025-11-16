@@ -1,0 +1,120 @@
+[build-system]
+requires = ["setuptools>=68.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "orbiton-agent"
+version = "0.1.0"
+description = "A transparent CLI interface for AI agents - working out loud"
+readme = "README.md"
+requires-python = ">=3.12"
+authors = [
+    {name = "SpoonOS", email = "dev@spoon.ai"}
+]
+keywords = ["ai", "agent", "cli", "console", "llm", "chatbot"]
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Intended Audience :: Developers",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.12",
+]
+
+dependencies = [
+    # ===== UI & CLI =====
+    "rich>=13.0.0",
+    "prompt_toolkit>=3.0.51",
+
+    # ===== Core Dependencies =====
+    "pydantic>=2.10.4",
+    "pydantic-core>=2.27.2",
+    "python-dotenv>=1.0.1",
+
+    # ===== LLM Providers =====
+    "openai>=1.70.0",
+    "anthropic>=0.42.0",
+    "google-generativeai>=0.8.5",
+    "google-genai>=1.11.0",
+
+    # ===== HTTP & Networking =====
+    "httpx>=0.28.1",
+    "httpcore>=1.0.7",
+    "aiohttp>=3.10.5",
+    "requests>=2.32.3",
+    "certifi>=2025.1.31",
+
+    # ===== Async & Concurrency =====
+    "anyio>=4.8.0",
+    "nest_asyncio>=1.6.0",
+
+    # ===== Data Processing =====
+    "tiktoken>=0.8.0",
+    "orjson>=3.10.15",
+    "regex>=2024.11.6",
+
+    # ===== API & Web Framework (for spoon_ai) =====
+    "fastapi>=0.115.7",
+    "starlette>=0.45.3",
+    "uvicorn[standard]>=0.32.0",
+
+    # ===== Model Context Protocol =====
+    "fastmcp>=2.12.0",
+
+    # ===== Supporting Libraries =====
+    "tenacity>=8.5.0",
+    "tqdm>=4.67.1",
+    "typing-extensions>=4.12.2",
+    "termcolor>=3.0.1",
+
+    # ===== Database (for spoon_ai) =====
+    "sqlalchemy>=2.0.38",
+
+    # ===== Web3 & Blockchain (optional, for crypto tools) =====
+    "web3>=7.11.0",
+    "cryptography>=41.0.0",
+    "eth-utils>=2.0.0",
+    "rlp>=3.0.0",
+
+    # ===== Cloud Services (optional) =====
+    "boto3>=1.35.99",
+    "botocore>=1.35.99",
+
+    # ===== Google APIs (for Gemini) =====
+    "google-api-core>=2.24.2",
+    "grpcio>=1.71.0",
+    "protobuf>=3.19.5",
+    "googleapis-common-protos>=1.60.0",
+
+    # ===== Payment Rails =====
+    "x402>=0.2.1",
+
+    # ===== Other Dependencies =====
+    "websockets>=15.0.1",
+    "pinecone>=6.0.2",
+    "google>=3.0.0",
+    "neo-mamba>=3.0.1",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=7.0.0",
+    "black>=23.0.0",
+    "ruff>=0.1.0",
+]
+
+[project.scripts]
+orbiton-agent = "orbiton_agent.main:main"
+orbiton = "orbiton_agent.main:main"
+
+[tool.setuptools]
+packages = ["orbiton_agent"]
+
+[tool.setuptools.package-dir]
+orbiton_agent = "."
+
+[tool.black]
+line-length = 100
+target-version = ['py312']
+
+[tool.ruff]
+line-length = 100
+target-version = "py312"

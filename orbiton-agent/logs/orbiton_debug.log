@@ -1,0 +1,162 @@
+2025-11-16 10:55:20,008 - spoon_ai.llm.config - INFO - Loaded environment variables from .env
+2025-11-16 10:55:20,008 - spoon_ai.llm.config - INFO - Using generic BASE_URL for openai: https://api.z.ai/api/coding/paas/v4
+2025-11-16 10:55:20,008 - spoon_ai.llm.registry - INFO - Created provider instance: openai
+2025-11-16 10:55:20,008 - spoon_ai.llm.manager - INFO - Configured provider: openai
+2025-11-16 10:55:20,008 - spoon_ai.llm.config - INFO - Using generic BASE_URL for openai: https://api.z.ai/api/coding/paas/v4
+2025-11-16 10:55:20,008 - spoon_ai.llm.config - DEBUG - Found API key for openai
+2025-11-16 10:55:20,008 - spoon_ai.llm.config - INFO - Using generic BASE_URL for anthropic: https://api.z.ai/api/coding/paas/v4
+2025-11-16 10:55:20,008 - spoon_ai.llm.config - INFO - Using generic BASE_URL for openrouter: https://api.z.ai/api/coding/paas/v4
+2025-11-16 10:55:20,008 - spoon_ai.llm.config - INFO - Using generic BASE_URL for deepseek: https://api.z.ai/api/coding/paas/v4
+2025-11-16 10:55:20,008 - spoon_ai.llm.config - INFO - Using generic BASE_URL for gemini: https://api.z.ai/api/coding/paas/v4
+2025-11-16 10:55:20,008 - spoon_ai.llm.config - INFO - Intelligently selected openai as default provider (available: ['openai'])
+2025-11-16 10:55:20,008 - spoon_ai.llm.config - INFO - Using generic BASE_URL for openai: https://api.z.ai/api/coding/paas/v4
+2025-11-16 10:55:20,008 - spoon_ai.llm.config - INFO - Using generic BASE_URL for anthropic: https://api.z.ai/api/coding/paas/v4
+2025-11-16 10:55:20,008 - spoon_ai.llm.config - INFO - Using generic BASE_URL for openrouter: https://api.z.ai/api/coding/paas/v4
+2025-11-16 10:55:20,008 - spoon_ai.llm.config - INFO - Using generic BASE_URL for deepseek: https://api.z.ai/api/coding/paas/v4
+2025-11-16 10:55:20,008 - spoon_ai.llm.config - INFO - Using generic BASE_URL for gemini: https://api.z.ai/api/coding/paas/v4
+2025-11-16 10:55:20,008 - spoon_ai.llm.config - INFO - Using intelligent fallback chain: ['openai']
+2025-11-16 10:55:20,008 - spoon_ai.llm.manager - INFO - LLM Manager initialized with providers: ['openai']
+2025-11-16 10:55:20,008 - spoon_ai.llm.manager - INFO - Default provider: openai
+2025-11-16 10:55:20,008 - spoon_ai.llm.manager - INFO - Fallback chain: ['openai']
+2025-11-16 10:55:20,008 - spoon_ai.chat - INFO - Using full manual override mode
+2025-11-16 10:55:20,008 - spoon_ai.chat - INFO - Updated existing provider config for openai
+2025-11-16 10:55:20,008 - spoon_ai.chat - INFO - Applied manual override for provider: openai
+2025-11-16 10:55:20,008 - spoon_ai.chat - INFO - Short-term memory manager enabled with config: max_tokens=8000, strategy=summarize, messages_to_keep=5
+2025-11-16 10:55:20,008 - spoon_ai.chat - INFO - ChatBot initialized with LLM Manager architecture (priority mode: full_manual_override)
+2025-11-16 10:55:20,008 - spoon_ai.tools.mcp_tool - DEBUG - Creating stdio-based transport for command: npx
+2025-11-16 10:55:20,009 - spoon_ai.tools.mcp_tool - INFO - Initialized MCP tool 'gemini-cli' with deferred parameter loading
+2025-11-16 10:55:20,009 - agents.factory - INFO - Created MCP tool: gemini-cli
+2025-11-16 10:55:20,009 - spoon_ai.agents.spoon_react_mcp - INFO - Initialized SpoonReactMCP agent: spoon_react_mcp
+2025-11-16 10:55:20,009 - asyncio - DEBUG - Using selector: KqueueSelector
+2025-11-16 10:55:20,009 - asyncio - DEBUG - Using selector: KqueueSelector
+2025-11-16 10:55:30,559 - agents.factory - INFO - ================================================================================
+2025-11-16 10:55:30,559 - agents.factory - INFO - AGENT INPUT:
+2025-11-16 10:55:30,559 - agents.factory - INFO -   User Input: ask gemini about weather use websearch
+2025-11-16 10:55:30,560 - agents.factory - INFO - ================================================================================
+2025-11-16 10:55:30,564 - spoon_ai.agents.base - DEBUG - Agent spoon_react_mcp: State AgentState.RUNNING -> AgentState.RUNNING
+2025-11-16 10:55:30,564 - spoon_ai - INFO - Agent spoon_react_mcp is running step 1/10
+2025-11-16 10:55:30,564 - spoon_ai - DEBUG - 🧹 spoon_react_mcp invalidated MCP tools cache
+2025-11-16 10:55:30,564 - spoon_ai - INFO - 🔄 spoon_react_mcp fetching MCP tools from server...
+2025-11-16 10:55:31,136 - spoon_ai.agents.mcp_client_mixin - DEBUG - Created MCP session for task 4393999136 (total: 1)
+2025-11-16 10:55:31,138 - spoon_ai.tools.mcp_tool - DEBUG - MCP health check passed for 'gemini-cli' - 6 tools available
+2025-11-16 10:55:31,138 - spoon_ai.agents.mcp_client_mixin - DEBUG - Successfully closed MCP session for task 4393999136
+2025-11-16 10:55:31,139 - spoon_ai.agents.mcp_client_mixin - DEBUG - Created MCP session for task 4393999136 (total: 1)
+2025-11-16 10:55:31,140 - spoon_ai.tools.mcp_tool - DEBUG - Applied dynamic schema from MCP server for tool 'ask-gemini': {'type': 'object', 'properties': {'prompt': {'type': 'string', 'minLength': 1, 'description': "Analysis request. Use @ syntax to include files (e.g., '@largefile.js explain what this does') or ask general questions"}, 'model': {'type': 'string', 'description': "Optional model to use (e.g., 'gemini-2.5-flash'). If not specified, uses the default model (gemini-2.5-pro)."}, 'sandbox': {'type': 'boolean', 'default': False, 'description': 'Use sandbox mode (-s flag) to safely test code changes, execute scripts, or run potentially risky operations in an isolated environment'}, 'changeMode': {'type': 'boolean', 'default': False, 'description': 'Enable structured change mode - formats prompts to prevent tool errors and returns structured edit suggestions that Claude can apply directly'}, 'chunkIndex': {'type': ['number', 'string'], 'description': 'Which chunk to return (1-based)'}, 'chunkCacheKey': {'type': 'string', 'description': 'Optional cache key for continuation'}}, 'required': ['prompt']}
+2025-11-16 10:55:31,140 - spoon_ai.tools.mcp_tool - DEBUG - Updated description for tool 'ask-gemini': model selection [-m], sandbox [-s], and changeMode:boolean for providing edits
+2025-11-16 10:55:31,140 - spoon_ai.tools.mcp_tool - DEBUG - Successfully configured parameters for tool 'ask-gemini' from MCP server.
+2025-11-16 10:55:31,140 - spoon_ai.agents.mcp_client_mixin - DEBUG - Successfully closed MCP session for task 4393999136
+2025-11-16 10:55:31,140 - spoon_ai.agents.spoon_react_mcp - INFO - Found 1 MCP tools: ['ask-gemini']
+2025-11-16 10:55:31,140 - spoon_ai - INFO - 📋 spoon_react_mcp cached 1 MCP tools
+2025-11-16 10:55:31,141 - spoon_ai.llm.manager - DEBUG - Provider openai supports tools
+2025-11-16 10:55:31,141 - spoon_ai.llm.manager - INFO - Initializing provider: openai
+2025-11-16 10:55:31,170 - spoon_ai.llm.providers.openai_compatible_provider - INFO - openai provider initialized with model: glm-4.6
+2025-11-16 10:55:31,170 - spoon_ai.llm.manager - INFO - Successfully initialized provider: openai
+2025-11-16 10:55:31,170 - spoon_ai.llm.monitoring - DEBUG - [2113eb8b-e379-46a2-a43e-494f25ad5784] openai.chat_with_tools started
+2025-11-16 10:55:31,267 - openai._base_client - DEBUG - Request options: {'method': 'post', 'url': '/chat/completions', 'files': None, 'idempotency_key': 'stainless-python-retry-5680e415-5ee6-40d9-9101-69822a37fd17', 'json_data': {'messages': [{'role': 'system', 'content': "You are Orbiton, a worldly-wise AI researcher specializing in prediction markets. You cut through the noise to deliver insights that matter - no fluff, just facts. With a fun, sharp wit and years of market wisdom, you help users navigate the fascinating world of forecasting, betting markets, and collective intelligence. You're here to research, analyze, and enlighten - one prediction at a time."}, {'role': 'user', 'content': 'ask gemini about weather use websearch'}], 'model': 'glm-4.6', 'max_tokens': 4096, 'stream': False, 'temperature': 0.3, 'tool_choice': 'auto', 'tools': [{'type': 'function', 'function': {'name': 'ask-gemini', 'description': 'model selection [-m], sandbox [-s], and changeMode:boolean for providing edits', 'parameters': {'type': 'object', 'properties': {'prompt': {'type': 'string', 'minLength': 1, 'description': "Analysis request. Use @ syntax to include files (e.g., '@largefile.js explain what this does') or ask general questions"}, 'model': {'type': 'string', 'description': "Optional model to use (e.g., 'gemini-2.5-flash'). If not specified, uses the default model (gemini-2.5-pro)."}, 'sandbox': {'type': 'boolean', 'default': False, 'description': 'Use sandbox mode (-s flag) to safely test code changes, execute scripts, or run potentially risky operations in an isolated environment'}, 'changeMode': {'type': 'boolean', 'default': False, 'description': 'Enable structured change mode - formats prompts to prevent tool errors and returns structured edit suggestions that Claude can apply directly'}, 'chunkIndex': {'type': ['number', 'string'], 'description': 'Which chunk to return (1-based)'}, 'chunkCacheKey': {'type': 'string', 'description': 'Optional cache key for continuation'}}, 'required': ['prompt']}}}]}}
+2025-11-16 10:55:31,267 - openai._base_client - DEBUG - Sending HTTP Request: POST https://api.z.ai/api/coding/paas/v4/chat/completions
+2025-11-16 10:55:31,267 - httpcore.connection - DEBUG - connect_tcp.started host='api.z.ai' port=443 local_address=None timeout=30 socket_options=None
+2025-11-16 10:55:31,356 - httpcore.connection - DEBUG - connect_tcp.complete return_value=<httpcore._backends.anyio.AnyIOStream object at 0x1075056a0>
+2025-11-16 10:55:31,356 - httpcore.connection - DEBUG - start_tls.started ssl_context=<ssl.SSLContext object at 0x10607b1d0> server_hostname='api.z.ai' timeout=30
+2025-11-16 10:55:31,509 - httpcore.connection - DEBUG - start_tls.complete return_value=<httpcore._backends.anyio.AnyIOStream object at 0x107426350>
+2025-11-16 10:55:31,510 - httpcore.http11 - DEBUG - send_request_headers.started request=<Request [b'POST']>
+2025-11-16 10:55:31,511 - httpcore.http11 - DEBUG - send_request_headers.complete
+2025-11-16 10:55:31,512 - httpcore.http11 - DEBUG - send_request_body.started request=<Request [b'POST']>
+2025-11-16 10:55:31,512 - httpcore.http11 - DEBUG - send_request_body.complete
+2025-11-16 10:55:31,512 - httpcore.http11 - DEBUG - receive_response_headers.started request=<Request [b'POST']>
+2025-11-16 10:55:35,304 - httpcore.http11 - DEBUG - receive_response_headers.complete return_value=(b'HTTP/1.1', 200, b'OK', [(b'Server', b'nginx'), (b'Date', b'Sun, 16 Nov 2025 03:55:35 GMT'), (b'Content-Type', b'application/json; charset=UTF-8'), (b'Transfer-Encoding', b'chunked'), (b'Connection', b'keep-alive'), (b'Vary', b'Accept-Encoding'), (b'Vary', b'Origin'), (b'Vary', b'Access-Control-Request-Method'), (b'Vary', b'Access-Control-Request-Headers'), (b'X-LOG-ID', b'2025111611553193e1c03f21a74e2c'), (b'Vary', b'Origin'), (b'Vary', b'Access-Control-Request-Method'), (b'Vary', b'Access-Control-Request-Headers'), (b'Strict-Transport-Security', b'max-age=31536000; includeSubDomains'), (b'Content-Encoding', b'gzip')])
+2025-11-16 10:55:35,306 - httpx - INFO - HTTP Request: POST https://api.z.ai/api/coding/paas/v4/chat/completions "HTTP/1.1 200 OK"
+2025-11-16 10:55:35,307 - httpcore.http11 - DEBUG - receive_response_body.started request=<Request [b'POST']>
+2025-11-16 10:55:35,307 - httpcore.http11 - DEBUG - receive_response_body.complete
+2025-11-16 10:55:35,307 - httpcore.http11 - DEBUG - response_closed.started
+2025-11-16 10:55:35,308 - httpcore.http11 - DEBUG - response_closed.complete
+2025-11-16 10:55:35,308 - openai._base_client - DEBUG - HTTP Response: POST https://api.z.ai/api/coding/paas/v4/chat/completions "200 OK" Headers([('server', 'nginx'), ('date', 'Sun, 16 Nov 2025 03:55:35 GMT'), ('content-type', 'application/json; charset=UTF-8'), ('transfer-encoding', 'chunked'), ('connection', 'keep-alive'), ('vary', 'Accept-Encoding'), ('vary', 'Origin'), ('vary', 'Access-Control-Request-Method'), ('vary', 'Access-Control-Request-Headers'), ('x-log-id', '2025111611553193e1c03f21a74e2c'), ('vary', 'Origin'), ('vary', 'Access-Control-Request-Method'), ('vary', 'Access-Control-Request-Headers'), ('strict-transport-security', 'max-age=31536000; includeSubDomains'), ('content-encoding', 'gzip')])
+2025-11-16 10:55:35,308 - openai._base_client - DEBUG - request_id: None
+2025-11-16 10:55:35,318 - spoon_ai.llm.monitoring - DEBUG - [2113eb8b-e379-46a2-a43e-494f25ad5784] openai.chat_with_tools completed in 4.147s
+2025-11-16 10:55:35,318 - spoon_ai.llm.manager - DEBUG - Updated openai health status: True
+2025-11-16 10:55:35,318 - spoon_ai - INFO - [36m🤔 spoon_react_mcp's thoughts received (len=169)[0m
+2025-11-16 10:55:35,318 - spoon_ai - INFO - [32m🛠️ spoon_react_mcp selected 1 tools[0m
+2025-11-16 10:55:35,321 - spoon_ai.agents.mcp_client_mixin - DEBUG - Created MCP session for task 4394000544 (total: 1)
+2025-11-16 10:55:35,321 - spoon_ai.tools.mcp_tool - DEBUG - Calling MCP tool 'ask-gemini' with args: {'prompt': 'What is the current weather forecast and conditions? Please provide general weather information and any notable weather patterns or events happening recently.'}
+2025-11-16 10:55:49,805 - spoon_ai.agents.mcp_client_mixin - DEBUG - Successfully closed MCP session for task 4394000544
+2025-11-16 10:55:49,806 - spoon_ai - INFO - Tool ask-gemini executed with result: Observed output of cmd ask-gemini execution: Gemini response:
+I can provide a weather forecast, but I need to know your location. Please tell me the city and state/country you're interested in.
+2025-11-16 10:55:49,806 - spoon_ai - INFO - Step 1: Observed output of cmd ask-gemini execution: Gemini response:
+I can provide a weather forecast, but I need to know your location. Please tell me the city and state/country you're interested in.
+2025-11-16 10:55:49,806 - spoon_ai - INFO - Agent spoon_react_mcp is running step 2/10
+2025-11-16 10:55:49,806 - spoon_ai - INFO - ♻️ spoon_react_mcp using cached MCP tools (1 tools)
+2025-11-16 10:55:49,806 - spoon_ai.llm.manager - DEBUG - Provider openai supports tools
+2025-11-16 10:55:49,806 - spoon_ai.llm.monitoring - DEBUG - [b3394807-8de0-4d9d-87cf-942a2f610ee1] openai.chat_with_tools started
+2025-11-16 10:55:49,807 - openai._base_client - DEBUG - Request options: {'method': 'post', 'url': '/chat/completions', 'files': None, 'idempotency_key': 'stainless-python-retry-f73c9db7-ae51-4665-9c94-a6e8c8b4855b', 'json_data': {'messages': [{'role': 'system', 'content': "You are Orbiton, a worldly-wise AI researcher specializing in prediction markets. You cut through the noise to deliver insights that matter - no fluff, just facts. With a fun, sharp wit and years of market wisdom, you help users navigate the fascinating world of forecasting, betting markets, and collective intelligence. You're here to research, analyze, and enlighten - one prediction at a time."}, {'role': 'user', 'content': 'ask gemini about weather use websearch'}, {'role': 'assistant', 'content': "\nI'll ask Gemini about weather for you. Note that the available function doesn't include websearch capabilities, but I can still query Gemini about weather information.\n", 'tool_calls': [{'id': 'call_-8155568295182467758', 'type': 'function', 'function': {'name': 'ask-gemini', 'arguments': '{"prompt":"What is the current weather forecast and conditions? Please provide general weather information and any notable weather patterns or events happening recently."}'}}]}, {'role': 'tool', 'content': "Observed output of cmd ask-gemini execution: Gemini response:\nI can provide a weather forecast, but I need to know your location. Please tell me the city and state/country you're interested in.", 'name': 'ask-gemini', 'tool_call_id': 'call_-8155568295182467758'}], 'model': 'glm-4.6', 'max_tokens': 4096, 'stream': False, 'temperature': 0.3, 'tool_choice': 'auto', 'tools': [{'type': 'function', 'function': {'name': 'ask-gemini', 'description': 'model selection [-m], sandbox [-s], and changeMode:boolean for providing edits', 'parameters': {'type': 'object', 'properties': {'prompt': {'type': 'string', 'minLength': 1, 'description': "Analysis request. Use @ syntax to include files (e.g., '@largefile.js explain what this does') or ask general questions"}, 'model': {'type': 'string', 'description': "Optional model to use (e.g., 'gemini-2.5-flash'). If not specified, uses the default model (gemini-2.5-pro)."}, 'sandbox': {'type': 'boolean', 'default': False, 'description': 'Use sandbox mode (-s flag) to safely test code changes, execute scripts, or run potentially risky operations in an isolated environment'}, 'changeMode': {'type': 'boolean', 'default': False, 'description': 'Enable structured change mode - formats prompts to prevent tool errors and returns structured edit suggestions that Claude can apply directly'}, 'chunkIndex': {'type': ['number', 'string'], 'description': 'Which chunk to return (1-based)'}, 'chunkCacheKey': {'type': 'string', 'description': 'Optional cache key for continuation'}}, 'required': ['prompt']}}}]}}
+2025-11-16 10:55:49,808 - openai._base_client - DEBUG - Sending HTTP Request: POST https://api.z.ai/api/coding/paas/v4/chat/completions
+2025-11-16 10:55:49,808 - httpcore.connection - DEBUG - close.started
+2025-11-16 10:55:49,808 - httpcore.connection - DEBUG - close.complete
+2025-11-16 10:55:49,808 - httpcore.connection - DEBUG - connect_tcp.started host='api.z.ai' port=443 local_address=None timeout=30 socket_options=None
+2025-11-16 10:55:49,876 - httpcore.connection - DEBUG - connect_tcp.complete return_value=<httpcore._backends.anyio.AnyIOStream object at 0x1074274d0>
+2025-11-16 10:55:49,877 - httpcore.connection - DEBUG - start_tls.started ssl_context=<ssl.SSLContext object at 0x10607b1d0> server_hostname='api.z.ai' timeout=30
+2025-11-16 10:55:50,420 - httpcore.connection - DEBUG - start_tls.complete return_value=<httpcore._backends.anyio.AnyIOStream object at 0x1075403e0>
+2025-11-16 10:55:50,420 - httpcore.http11 - DEBUG - send_request_headers.started request=<Request [b'POST']>
+2025-11-16 10:55:50,421 - httpcore.http11 - DEBUG - send_request_headers.complete
+2025-11-16 10:55:50,421 - httpcore.http11 - DEBUG - send_request_body.started request=<Request [b'POST']>
+2025-11-16 10:55:50,421 - httpcore.http11 - DEBUG - send_request_body.complete
+2025-11-16 10:55:50,421 - httpcore.http11 - DEBUG - receive_response_headers.started request=<Request [b'POST']>
+2025-11-16 10:55:54,528 - httpcore.http11 - DEBUG - receive_response_headers.complete return_value=(b'HTTP/1.1', 200, b'OK', [(b'Server', b'nginx'), (b'Date', b'Sun, 16 Nov 2025 03:55:54 GMT'), (b'Content-Type', b'application/json; charset=UTF-8'), (b'Transfer-Encoding', b'chunked'), (b'Connection', b'keep-alive'), (b'Vary', b'Accept-Encoding'), (b'Vary', b'Origin'), (b'Vary', b'Access-Control-Request-Method'), (b'Vary', b'Access-Control-Request-Headers'), (b'X-LOG-ID', b'20251116115550ae6f15728d364418'), (b'Vary', b'Origin'), (b'Vary', b'Access-Control-Request-Method'), (b'Vary', b'Access-Control-Request-Headers'), (b'Strict-Transport-Security', b'max-age=31536000; includeSubDomains'), (b'Content-Encoding', b'gzip')])
+2025-11-16 10:55:54,529 - httpx - INFO - HTTP Request: POST https://api.z.ai/api/coding/paas/v4/chat/completions "HTTP/1.1 200 OK"
+2025-11-16 10:55:54,529 - httpcore.http11 - DEBUG - receive_response_body.started request=<Request [b'POST']>
+2025-11-16 10:55:54,530 - httpcore.http11 - DEBUG - receive_response_body.complete
+2025-11-16 10:55:54,530 - httpcore.http11 - DEBUG - response_closed.started
+2025-11-16 10:55:54,530 - httpcore.http11 - DEBUG - response_closed.complete
+2025-11-16 10:55:54,531 - openai._base_client - DEBUG - HTTP Response: POST https://api.z.ai/api/coding/paas/v4/chat/completions "200 OK" Headers([('server', 'nginx'), ('date', 'Sun, 16 Nov 2025 03:55:54 GMT'), ('content-type', 'application/json; charset=UTF-8'), ('transfer-encoding', 'chunked'), ('connection', 'keep-alive'), ('vary', 'Accept-Encoding'), ('vary', 'Origin'), ('vary', 'Access-Control-Request-Method'), ('vary', 'Access-Control-Request-Headers'), ('x-log-id', '20251116115550ae6f15728d364418'), ('vary', 'Origin'), ('vary', 'Access-Control-Request-Method'), ('vary', 'Access-Control-Request-Headers'), ('strict-transport-security', 'max-age=31536000; includeSubDomains'), ('content-encoding', 'gzip')])
+2025-11-16 10:55:54,531 - openai._base_client - DEBUG - request_id: None
+2025-11-16 10:55:54,532 - spoon_ai.llm.monitoring - DEBUG - [b3394807-8de0-4d9d-87cf-942a2f610ee1] openai.chat_with_tools completed in 4.726s
+2025-11-16 10:55:54,532 - spoon_ai.llm.manager - DEBUG - Updated openai health status: True
+2025-11-16 10:55:54,532 - spoon_ai - INFO - 🏁 spoon_react_mcp terminating due to finish_reason signals (no tool calls)
+2025-11-16 10:55:54,533 - spoon_ai - INFO - Resetting agent spoon_react_mcp state from AgentState.FINISHED to IDLE
+2025-11-16 10:55:54,533 - agents.factory - INFO - ================================================================================
+2025-11-16 10:55:54,533 - agents.factory - INFO - AGENT OUTPUT:
+2025-11-16 10:55:54,533 - agents.factory - INFO -   Response: 
+Gemini needs a location to provide weather information. The AI responded that it can give a weather forecast, but requires knowing the city and state/country you're interested in.
+
+Also, I should not...
+2025-11-16 10:55:54,533 - agents.factory - INFO -   Length: 426 chars
+2025-11-16 10:55:54,533 - agents.factory - INFO - ================================================================================
+2025-11-16 10:58:55,244 - agents.factory - INFO - ================================================================================
+2025-11-16 10:58:55,248 - agents.factory - INFO - AGENT INPUT:
+2025-11-16 10:58:55,248 - agents.factory - INFO -   User Input: okee
+2025-11-16 10:58:55,248 - agents.factory - INFO - ================================================================================
+2025-11-16 10:58:55,248 - spoon_ai.agents.base - DEBUG - Agent spoon_react_mcp: State AgentState.RUNNING -> AgentState.RUNNING
+2025-11-16 10:58:55,248 - spoon_ai - INFO - Agent spoon_react_mcp is running step 1/10
+2025-11-16 10:58:55,248 - spoon_ai - INFO - ♻️ spoon_react_mcp using cached MCP tools (1 tools)
+2025-11-16 10:58:55,248 - spoon_ai.llm.manager - DEBUG - Provider openai supports tools
+2025-11-16 10:58:55,248 - spoon_ai.llm.monitoring - DEBUG - [096e3c35-2ca1-413d-9cce-98abd61617e1] openai.chat_with_tools started
+2025-11-16 10:58:55,250 - openai._base_client - DEBUG - Request options: {'method': 'post', 'url': '/chat/completions', 'files': None, 'idempotency_key': 'stainless-python-retry-b86423e5-e928-49d4-929a-900d9adc47d5', 'json_data': {'messages': [{'role': 'system', 'content': "You are Orbiton, a worldly-wise AI researcher specializing in prediction markets. You cut through the noise to deliver insights that matter - no fluff, just facts. With a fun, sharp wit and years of market wisdom, you help users navigate the fascinating world of forecasting, betting markets, and collective intelligence. You're here to research, analyze, and enlighten - one prediction at a time."}, {'role': 'user', 'content': 'ask gemini about weather use websearch'}, {'role': 'assistant', 'content': "\nI'll ask Gemini about weather for you. Note that the available function doesn't include websearch capabilities, but I can still query Gemini about weather information.\n", 'tool_calls': [{'id': 'call_-8155568295182467758', 'type': 'function', 'function': {'name': 'ask-gemini', 'arguments': '{"prompt":"What is the current weather forecast and conditions? Please provide general weather information and any notable weather patterns or events happening recently."}'}}]}, {'role': 'tool', 'content': "Observed output of cmd ask-gemini execution: Gemini response:\nI can provide a weather forecast, but I need to know your location. Please tell me the city and state/country you're interested in.", 'name': 'ask-gemini', 'tool_call_id': 'call_-8155568295182467758'}, {'role': 'assistant', 'content': "\nGemini needs a location to provide weather information. The AI responded that it can give a weather forecast, but requires knowing the city and state/country you're interested in.\n\nAlso, I should note that the available function doesn't include websearch capabilities - I can only query Gemini directly. If you'd like weather information, please provide a specific location and I'll ask Gemini for the forecast for that area."}, {'role': 'user', 'content': 'okee'}], 'model': 'glm-4.6', 'max_tokens': 4096, 'stream': False, 'temperature': 0.3, 'tool_choice': 'auto', 'tools': [{'type': 'function', 'function': {'name': 'ask-gemini', 'description': 'model selection [-m], sandbox [-s], and changeMode:boolean for providing edits', 'parameters': {'type': 'object', 'properties': {'prompt': {'type': 'string', 'minLength': 1, 'description': "Analysis request. Use @ syntax to include files (e.g., '@largefile.js explain what this does') or ask general questions"}, 'model': {'type': 'string', 'description': "Optional model to use (e.g., 'gemini-2.5-flash'). If not specified, uses the default model (gemini-2.5-pro)."}, 'sandbox': {'type': 'boolean', 'default': False, 'description': 'Use sandbox mode (-s flag) to safely test code changes, execute scripts, or run potentially risky operations in an isolated environment'}, 'changeMode': {'type': 'boolean', 'default': False, 'description': 'Enable structured change mode - formats prompts to prevent tool errors and returns structured edit suggestions that Claude can apply directly'}, 'chunkIndex': {'type': ['number', 'string'], 'description': 'Which chunk to return (1-based)'}, 'chunkCacheKey': {'type': 'string', 'description': 'Optional cache key for continuation'}}, 'required': ['prompt']}}}]}}
+2025-11-16 10:58:55,250 - openai._base_client - DEBUG - Sending HTTP Request: POST https://api.z.ai/api/coding/paas/v4/chat/completions
+2025-11-16 10:58:55,251 - httpcore.connection - DEBUG - close.started
+2025-11-16 10:58:55,251 - httpcore.connection - DEBUG - close.complete
+2025-11-16 10:58:55,251 - httpcore.connection - DEBUG - connect_tcp.started host='api.z.ai' port=443 local_address=None timeout=30 socket_options=None
+2025-11-16 10:58:55,368 - httpcore.connection - DEBUG - connect_tcp.complete return_value=<httpcore._backends.anyio.AnyIOStream object at 0x107540b00>
+2025-11-16 10:58:55,368 - httpcore.connection - DEBUG - start_tls.started ssl_context=<ssl.SSLContext object at 0x10607b1d0> server_hostname='api.z.ai' timeout=30
+2025-11-16 10:58:55,757 - httpcore.connection - DEBUG - start_tls.complete return_value=<httpcore._backends.anyio.AnyIOStream object at 0x107518ef0>
+2025-11-16 10:58:55,758 - httpcore.http11 - DEBUG - send_request_headers.started request=<Request [b'POST']>
+2025-11-16 10:58:55,759 - httpcore.http11 - DEBUG - send_request_headers.complete
+2025-11-16 10:58:55,759 - httpcore.http11 - DEBUG - send_request_body.started request=<Request [b'POST']>
+2025-11-16 10:58:55,760 - httpcore.http11 - DEBUG - send_request_body.complete
+2025-11-16 10:58:55,760 - httpcore.http11 - DEBUG - receive_response_headers.started request=<Request [b'POST']>
+2025-11-16 10:58:59,640 - httpcore.http11 - DEBUG - receive_response_headers.complete return_value=(b'HTTP/1.1', 200, b'OK', [(b'Server', b'nginx'), (b'Date', b'Sun, 16 Nov 2025 03:58:59 GMT'), (b'Content-Type', b'application/json; charset=UTF-8'), (b'Transfer-Encoding', b'chunked'), (b'Connection', b'keep-alive'), (b'Vary', b'Accept-Encoding'), (b'Vary', b'Origin'), (b'Vary', b'Access-Control-Request-Method'), (b'Vary', b'Access-Control-Request-Headers'), (b'X-LOG-ID', b'2025111611585612743c43fc704e86'), (b'Vary', b'Origin'), (b'Vary', b'Access-Control-Request-Method'), (b'Vary', b'Access-Control-Request-Headers'), (b'Strict-Transport-Security', b'max-age=31536000; includeSubDomains'), (b'Content-Encoding', b'gzip')])
+2025-11-16 10:58:59,642 - httpx - INFO - HTTP Request: POST https://api.z.ai/api/coding/paas/v4/chat/completions "HTTP/1.1 200 OK"
+2025-11-16 10:58:59,642 - httpcore.http11 - DEBUG - receive_response_body.started request=<Request [b'POST']>
+2025-11-16 10:58:59,643 - httpcore.http11 - DEBUG - receive_response_body.complete
+2025-11-16 10:58:59,643 - httpcore.http11 - DEBUG - response_closed.started
+2025-11-16 10:58:59,644 - httpcore.http11 - DEBUG - response_closed.complete
+2025-11-16 10:58:59,644 - openai._base_client - DEBUG - HTTP Response: POST https://api.z.ai/api/coding/paas/v4/chat/completions "200 OK" Headers([('server', 'nginx'), ('date', 'Sun, 16 Nov 2025 03:58:59 GMT'), ('content-type', 'application/json; charset=UTF-8'), ('transfer-encoding', 'chunked'), ('connection', 'keep-alive'), ('vary', 'Accept-Encoding'), ('vary', 'Origin'), ('vary', 'Access-Control-Request-Method'), ('vary', 'Access-Control-Request-Headers'), ('x-log-id', '2025111611585612743c43fc704e86'), ('vary', 'Origin'), ('vary', 'Access-Control-Request-Method'), ('vary', 'Access-Control-Request-Headers'), ('strict-transport-security', 'max-age=31536000; includeSubDomains'), ('content-encoding', 'gzip')])
+2025-11-16 10:58:59,644 - openai._base_client - DEBUG - request_id: None
+2025-11-16 10:58:59,645 - spoon_ai.llm.monitoring - DEBUG - [096e3c35-2ca1-413d-9cce-98abd61617e1] openai.chat_with_tools completed in 4.397s
+2025-11-16 10:58:59,645 - spoon_ai.llm.manager - DEBUG - Updated openai health status: True
+2025-11-16 10:58:59,646 - spoon_ai - INFO - 🏁 spoon_react_mcp terminating due to finish_reason signals (no tool calls)
+2025-11-16 10:58:59,646 - spoon_ai - INFO - Resetting agent spoon_react_mcp state from AgentState.FINISHED to IDLE
+2025-11-16 10:58:59,646 - agents.factory - INFO - ================================================================================
+2025-11-16 10:58:59,647 - agents.factory - INFO - AGENT OUTPUT:
+2025-11-16 10:58:59,647 - agents.factory - INFO -   Response: 
+Got it! If you'd like that weather forecast, just let me know the location you're interested in. Or if there's anything else I can help you with - whether it's about prediction markets, forecasting, ...
+2025-11-16 10:58:59,647 - agents.factory - INFO -   Length: 238 chars
+2025-11-16 10:58:59,647 - agents.factory - INFO - ================================================================================
+2025-11-16 10:58:59,650 - spoon_ai.llm.manager - WARNING - No event loop available for async cleanup
